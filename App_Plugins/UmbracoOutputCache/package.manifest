@@ -1,0 +1,5 @@
+﻿{
+    "name": "UmbracoOutputCache",
+    "version": "1.0.0",
+    "allowPackageTelemetry": true
+}

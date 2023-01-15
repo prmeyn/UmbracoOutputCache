@@ -1,0 +1,21 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <UmbracoOutputCacheContentFilesPath>$(MSBuildThisFileDirectory)..\App_Plugins\UmbracoOutputCache\**\*.*</UmbracoOutputCacheContentFilesPath>
+  </PropertyGroup>
+
+  <Target Name="CopyUmbracoOutputCacheAssets" BeforeTargets="Build">
+    <ItemGroup>
+      <UmbracoOutputCacheContentFiles Include="$(UmbracoOutputCacheContentFilesPath)" />
+    </ItemGroup>
+    <Message Text="Copying UmbracoOutputCache files: $(UmbracoOutputCacheContentFilesPath) - #@(UmbracoOutputCacheContentFiles->Count()) files" Importance="high" />
+    <Copy SourceFiles="@(UmbracoOutputCacheContentFiles)" DestinationFiles="@(UmbracoOutputCacheContentFiles->'$(MSBuildProjectDirectory)\App_Plugins\UmbracoOutputCache\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+  </Target>
+
+  <Target Name="ClearUmbracoOutputCacheAssets" BeforeTargets="Clean">
+    <ItemGroup>
+      <UmbracoOutputCacheDir Include="$(MSBuildProjectDirectory)\App_Plugins\UmbracoOutputCache\" />
+    </ItemGroup>
+    <Message Text="Clear old UmbracoOutputCache data" Importance="high" />
+    <RemoveDir Directories="@(UmbracoOutputCacheDir)" />
+  </Target>
+</Project>
