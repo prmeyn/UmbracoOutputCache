@@ -1,14 +1,21 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
+	  <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <ContentTargetFolders>.</ContentTargetFolders>
     <Product>UmbracoOutputCache</Product>
     <PackageId>UmbracoOutputCache</PackageId>
     <Title>UmbracoOutputCache</Title>
     <Description>...</Description>
-    <PackageTags>umbraco plugin package</PackageTags>
+    <PackageTags>umbraco plugin package umbraco-marketplace</PackageTags>
   </PropertyGroup>
+	<PropertyGroup>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+	</PropertyGroup>
 
+	<ItemGroup>
+		<None Include="LICENSE" Pack="true" PackagePath=""/>
+	</ItemGroup>
   <ItemGroup>
     <PackageReference Include="Umbraco.Cms.Web.Website" Version="11.1.0" />
     <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="11.1.0" />
@@ -18,4 +25,7 @@
     <Content Include="App_Plugins\UmbracoOutputCache\**" ExcludeFromSingleFile="true" CopyToPublishDirectory="Always" />
     <None Include="buildTransitive\**" Pack="true" PackagePath="buildTransitive" />
   </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All"/>
+	</ItemGroup>
 </Project>
