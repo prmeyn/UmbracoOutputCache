@@ -8,11 +8,11 @@
 	},
 	"Screenshots": [
 		{
-			"ImageUrl": "https://raw.githubusercontent.com/prmeyn/UmbracoMongoDbClient/main/images/BeforeOutputCache.png",
+			"ImageUrl": "https://raw.githubusercontent.com/prmeyn/UmbracoOutputCache/main/images/BeforeOutputCache.png",
 			"Caption": "This CPU usage was taken without using the package during a k6.io load test"
 		},
 		{
-			"ImageUrl": "https://raw.githubusercontent.com/prmeyn/UmbracoMongoDbClient/main/images/AfterOutputCache.png",
+			"ImageUrl": "https://raw.githubusercontent.com/prmeyn/UmbracoOutputCache/main/images/AfterOutputCache.png",
 			"Caption": "Notice that the 100 % marker was not reached with the same load test, when the package was added."
 		}
 	],
