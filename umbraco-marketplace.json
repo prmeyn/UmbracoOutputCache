@@ -1,0 +1,18 @@
+{
+	"$schema": "https://marketplace.umbraco.com/umbraco-marketplace-schema.json",
+	"AddOnPackagesRequiredForUmbracoCloud": [],
+	"AlternatePackageNames": ["Output caching"],
+	"AuthorDetails": {
+		"Name": "Prashansa Meyn",
+		"Url": "https://github.com/sponsors/prmeyn"
+	},
+	"Category": "developer tools",
+	"Description": "Enables Output caching",
+	"LicenseTypes": [ "Free" ],
+	"LicenseType": "Free",
+	"PackageType": "Package",
+	"Url": "https://www.nuget.org/packages/UmbracoOutputCache",
+	"DiscussionForumUrl": "https://github.com/prmeyn/UmbracoOutputCache/issues",
+	"DocumentationUrl": "https://marketplace.umbraco.com/package/umbracooutputcache",
+	"IssueTrackerUrl": "https://github.com/prmeyn/UmbracoOutputCache/issues"
+}
