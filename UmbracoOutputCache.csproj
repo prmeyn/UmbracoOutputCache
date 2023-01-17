@@ -1,12 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
-	  <PublishRepositoryUrl>true</PublishRepositoryUrl>
+	<PublishRepositoryUrl>true</PublishRepositoryUrl>
     <ContentTargetFolders>.</ContentTargetFolders>
     <Product>UmbracoOutputCache</Product>
     <PackageId>UmbracoOutputCache</PackageId>
     <Title>UmbracoOutputCache</Title>
-    <Description>...</Description>
+    <Description>
+		This package caches all your server side code like in razor templates so that it is not excecuted over and over again as you get more concurrent visitors but will be cached for the duration you set, by default this package sets it to 10 seconds.
+		This should help improve the performance of your Umbraco server bringing down CPU utilization etc.
+	</Description>
     <PackageTags>umbraco plugin package umbraco-marketplace</PackageTags>
   </PropertyGroup>
 	<PropertyGroup>
@@ -34,5 +37,11 @@
 
 	<ItemGroup>
 		<None Include="README.md" Pack="true" PackagePath="\"/>
+	</ItemGroup>
+	<PropertyGroup>
+		<PackageIcon>icon.png</PackageIcon>
+	</PropertyGroup>
+	<ItemGroup>
+		<None Include="images\icon.png" Pack="true" PackagePath=""/>
 	</ItemGroup>
 </Project>
