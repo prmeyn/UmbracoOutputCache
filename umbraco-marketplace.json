@@ -1,8 +1,10 @@
 {
 	"$schema": "https://marketplace.umbraco.com/umbraco-marketplace-schema.json",
+	"Title" : "OutputCache",
 	"AddOnPackagesRequiredForUmbracoCloud": [],
 	"AlternatePackageNames": [ "Output caching" ],
 	"AuthorDetails": {
+		"SyncContributorsFromRepository": true,
 		"Name": "Prashansa Meyn",
 		"Url": "https://github.com/sponsors/prmeyn"
 	},
@@ -13,7 +15,7 @@
 		},
 		{
 			"ImageUrl": "https://raw.githubusercontent.com/prmeyn/UmbracoOutputCache/main/images/AfterOutputCache.png",
-			"Caption": "Notice that the 100 % marker was not reached with the same load test, when the package was added."
+			"Caption": "Notice that the 100 % marker was not reached with the same load test as the previous screenshot, after the package was added."
 		}
 	],
 	"Category": "developer tools",
