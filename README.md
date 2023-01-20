@@ -5,7 +5,7 @@ This should help improve the performance of your Umbraco server bringing down CP
 
 ## CacheLifeSpanInSeconds
 The default **CacheLifeSpanInSeconds** is 10 seconds, this can be modified using the [Advanced setup procedure](#advanced-setup-procedure)
-Its important to note that content changes you do in the Umbraco backoffice will need at least this configured amount of seconds to reflect in your frontend for you end users.
+Its important to note that content changes you do in the Umbraco backoffice will need at least this configured amount of seconds to reflect in your frontend for your end users.
 
 # Simple setup procedure
 Just install the [package](https://www.nuget.org/packages/UmbracoOutputCache), and your default RenderController will have OutputCache enabled with a 10 seconds cache interval, which means you get OutputCaching enabled by just installing the package.
