@@ -1,5 +1,5 @@
 ﻿{
-    "name": "UmbracoOutputCache",
-    "version": "11.1.7",
+    "name": "OutputCache",
+    "version": "11.1.8",
     "allowPackageTelemetry": true
 }
