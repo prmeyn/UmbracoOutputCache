@@ -5,6 +5,7 @@ using Umbraco.Cms.Core.DependencyInjection;
 using Umbraco.Cms.Web.Website.Controllers;
 using Umbraco.Cms.Web.Common.ApplicationBuilder;
 using System;
+using Umbraco.Cms.Core.Notifications;
 
 namespace UmbracoOutputCache.Setup;
 public sealed class OutputCacheComposer : IComposer
@@ -41,8 +42,11 @@ public sealed class OutputCacheComposer : IComposer
 			{
 				b.Expire(TimeSpan.FromSeconds(OutputCacheComponent.CachePolicyLifeSpanInSeconds));
 				b.Cache();
+				b.Tag(nameof(OutputCacheComposer));
 			});
 		});
+		// Register Notifcation Handlers
+		builder.AddNotificationHandler<ContentPublishedNotification, SubscribeToContentPublishedNotifacations>();
 	}
 }
 
