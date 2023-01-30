@@ -10,7 +10,7 @@ The default **CacheLifeSpanInSeconds** is 10 seconds, this can be modified using
 Just install the [package](https://www.nuget.org/packages/UmbracoOutputCache), and your default RenderController will have OutputCache enabled with a 10 seconds cache interval, which means you get OutputCaching enabled by just installing the package.
 
 # Advanced setup procedure
-The `appsettings.json` file can be used to change the OutputCache LifeSpanInSeconds from the default 10 seconds to 5 seconds as shown below
+The `appsettings.json` file can be used to change the OutputCache LifeSpanInSeconds from the default 10 seconds to E.g. 5 seconds as shown below
 ```json
 {
 	"OutputCacheSettings":
@@ -21,7 +21,7 @@ The `appsettings.json` file can be used to change the OutputCache LifeSpanInSeco
 ```
 
 # Hardcore setup procedure
-Since this package is [open source](https://github.com/prmeyn/UmbracoOutputCache), feel free to reference the source code and build your own OutputCache mechanisms. 
+Since this package is [open source](https://github.com/prmeyn/UmbracoOutputCache), feel free to reference the source code and build your own OutputCache mechanisms without having to install this package.
 
 For more details on how to configure your own default RenderController check [the official Umbraco documentaion](https://docs.umbraco.com/umbraco-cms/implementation/default-routing/controller-selection#change-the-default-controllers)
 
