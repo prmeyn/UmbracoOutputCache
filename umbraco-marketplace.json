@@ -1,6 +1,6 @@
 {
 	"$schema": "https://marketplace.umbraco.com/umbraco-marketplace-schema.json",
-	"Title" : "OutputCache",
+	"Title": "OutputCache",
 	"AddOnPackagesRequiredForUmbracoCloud": [],
 	"AlternatePackageNames": [ "Output caching" ],
 	"AuthorDetails": {
@@ -18,8 +18,8 @@
 			"Caption": "Notice that the 100 % marker was not reached with the same load test as the previous screenshot, after the package was added."
 		}
 	],
-	"Category": "developer tools",
-	"Description": "Enables Output caching",
+	"Category": "Developer Tools",
+	"Description": "Enables Output caching for the default RenderController",
 	"LicenseTypes": [ "Free" ],
 	"LicenseType": "Free",
 	"PackageType": "Package",
