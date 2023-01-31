@@ -4,7 +4,7 @@ This package caches all your server side code like the output of your razor temp
 This should help improve the performance of your Umbraco server bringing down CPU utilization etc.
 
 ## CacheLifeSpanInSeconds
-The default **CacheLifeSpanInSeconds** is 10 seconds, this can be modified using the [Advanced setup procedure](#advanced-setup-procedure). Its important to note that content changes in the backoffice will reset the cache, so that published changes are avaiable instantly. 
+The default **CacheLifeSpanInSeconds** is 10 seconds, this can be modified using the [Advanced setup procedure](#advanced-setup-procedure). Its important to note that content changes in the backoffice will reset the cache, so that published changes are available instantly. 
 
 # Simple setup procedure
 Just install the [package](https://www.nuget.org/packages/UmbracoOutputCache), and your default RenderController will have OutputCache enabled with a 10 seconds cache interval, which means you get OutputCaching enabled by just installing the package.
