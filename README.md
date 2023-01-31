@@ -1,10 +1,10 @@
 # What does this package do?
 [Output caching](https://learn.microsoft.com/en-us/aspnet/core/performance/caching/overview?view=aspnetcore-7.0#output-caching) has been introduced in ASP.NET Core 7.0, which means you need to be on at least [version 11 of Umbraco.](https://our.umbraco.com/download/releases/1110)
-This package caches all your server side code like the output of your razor templates so that it is not excecuted over and over again as you get more concurrent visitors but will be cached for the duration you set, by default this package sets it to 10 seconds.
+This package caches all your server side code like the output of your razor templates so that it is not executed over and over again as you get more concurrent visitors but will be cached for the duration you set, by default this package sets it to 10 seconds.
 This should help improve the performance of your Umbraco server bringing down CPU utilization etc.
 
 ## CacheLifeSpanInSeconds
-The default **CacheLifeSpanInSeconds** is 10 seconds, this can be modified using the [Advanced setup procedure](#advanced-setup-procedure)
+The default **CacheLifeSpanInSeconds** is 10 seconds, this can be modified using the [Advanced setup procedure](#advanced-setup-procedure). Its important to note that content changes in the backoffice will reset the cache, so that published changes are avaiable instantly. 
 
 # Simple setup procedure
 Just install the [package](https://www.nuget.org/packages/UmbracoOutputCache), and your default RenderController will have OutputCache enabled with a 10 seconds cache interval, which means you get OutputCaching enabled by just installing the package.
