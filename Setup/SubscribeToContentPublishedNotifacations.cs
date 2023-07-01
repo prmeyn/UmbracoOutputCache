@@ -6,7 +6,7 @@ using Umbraco.Cms.Core.Notifications;
 
 namespace UmbracoOutputCache.Setup
 {
-	public class SubscribeToContentPublishedNotifacations : INotificationHandler<ContentPublishedNotification>
+	public sealed class SubscribeToContentPublishedNotifacations : INotificationHandler<ContentPublishedNotification>
 	{
 		private readonly ILogger<SubscribeToContentPublishedNotifacations> _logger;
 		private readonly IOutputCacheStore _store;

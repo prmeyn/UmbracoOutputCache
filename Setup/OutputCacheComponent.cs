@@ -4,7 +4,7 @@ using Umbraco.Cms.Core.Composing;
 
 namespace UmbracoOutputCache.Setup
 {
-	public class OutputCacheComponent : IComponent
+	public sealed class OutputCacheComponent : IComponent
 	{
 		private readonly IConfiguration _config;
 		private readonly ILogger<OutputCacheComponent> _logger;
