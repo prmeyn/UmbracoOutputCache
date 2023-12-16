@@ -21,7 +21,7 @@ namespace UmbracoOutputCache.Setup
 			// Define the cancellation token.
 			CancellationTokenSource source = new();
 			CancellationToken cancellationToken = source.Token;
-			_logger.LogInformation("OutputCache Eviction needs to be done as content has been published.");
+			_logger.LogInformation("OutputCache Eviction is being done as content has been published.");
 			_store.EvictByTagAsync(nameof(OutputCacheComposer), cancellationToken);
 		}
 	}
