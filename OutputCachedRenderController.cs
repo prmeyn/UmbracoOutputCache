@@ -2,9 +2,9 @@
 using Microsoft.AspNetCore.Mvc.ViewEngines;
 using Microsoft.AspNetCore.OutputCaching;
 using Microsoft.Extensions.Logging;
-using UmbracoOutputCache.Setup;
 using Umbraco.Cms.Core.Web;
 using Umbraco.Cms.Web.Common.Controllers;
+using UmbracoOutputCache.Setup;
 
 namespace UmbracoOutputCache
 {
