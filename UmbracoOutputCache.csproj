@@ -20,7 +20,7 @@
 		<None Include="LICENSE" Pack="true" PackagePath="" />
 	</ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Umbraco.Cms.Web.Website" Version="15.4.3" />
+    <PackageReference Include="Umbraco.Cms.Web.Website" Version="16.0.0" />
   </ItemGroup>
 
   <ItemGroup>
