@@ -1,10 +1,12 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using System.Threading;
+using System.Threading.Tasks;
 using Umbraco.Cms.Core.Composing;
 
 namespace UmbracoOutputCache.Setup
 {
-	public sealed class OutputCacheComponent : IComponent
+	public sealed class OutputCacheComponent : IAsyncComponent
 	{
 		private readonly IConfiguration _config;
 		private readonly ILogger<OutputCacheComponent> _logger;
@@ -17,7 +19,9 @@ namespace UmbracoOutputCache.Setup
 			_config = config;
 			_logger = logger;
 		}
-		public void Initialize()
+	
+
+		public Task InitializeAsync(bool isRestarting, CancellationToken cancellationToken)
 		{
 			var outputCacheSettings = "OutputCacheSettings";
 			var cacheLifeSpanInSeconds = _config.GetValue<int>($"{outputCacheSettings}:CacheLifeSpanInSeconds");
@@ -28,10 +32,13 @@ namespace UmbracoOutputCache.Setup
 			}
 			CachePolicyLifeSpanInSeconds = cacheLifeSpanInSeconds;
 			_logger.LogInformation("Setting DefaultControllerType to {0} with OutputCaching for policy {1} with a lifeSpan of {2} seconds", nameof(OutputCachedRenderController), CachePolicyName, cacheLifeSpanInSeconds);
+			return Task.CompletedTask;
 		}
 
-		public void Terminate()
+		public Task TerminateAsync(bool isRestarting, CancellationToken cancellationToken)
 		{
+			_logger.LogInformation("TerminateAsync {0} with OutputCaching for policy {1}", nameof(OutputCachedRenderController), CachePolicyName);
+			return Task.CompletedTask;
 		}
 	}
 }
