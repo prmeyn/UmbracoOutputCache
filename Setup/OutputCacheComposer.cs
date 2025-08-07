@@ -14,20 +14,13 @@ public sealed class OutputCacheComposer : IComposer
 	{
 		builder.Services.Configure<UmbracoPipelineOptions>(options =>
 		{
-			options.AddFilter(new UmbracoPipelineFilter(
-				nameof(OutputCacheComposer),
-				applicationBuilder =>
+			options.AddFilter(new UmbracoPipelineFilter(nameof(OutputCacheComposer))
+			{
+				PostPipeline = postPipeline =>
 				{
-				},
-				applicationBuilder =>
-				{
-					applicationBuilder.UseOutputCache();
-				},
-				applicationBuilder =>
-				{
-					// Add your endpoints here..
+					postPipeline.UseOutputCache();
 				}
-			));
+			});
 		});
 
 		// Configure Umbraco Render Controller Type
