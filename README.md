@@ -33,8 +33,6 @@ Since this package is [open source](https://github.com/prmeyn/UmbracoOutputCache
 
 For more details on how to configure your own default RenderController check [the official Umbraco documentaion](https://docs.umbraco.com/umbraco-cms/implementation/default-routing/controller-selection#change-the-default-controllers)
 
-# Want to sponsor?
-This is a free package, but if you want to sponsor my open source work, here is [my GitHub profile](https://github.com/sponsors/prmeyn)
 </del>
 
 
