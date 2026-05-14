@@ -19,7 +19,7 @@
 		}
 	],
 	"Category": "Developer Tools",
-	"Description": "Enables Output caching for the default RenderController",
+	"Description": "This package is now obsolete — Umbraco supports output caching for server-side rendering (SSR) out of the box.",
 	"LicenseTypes": [ "Free" ],
 	"LicenseType": "Free",
 	"PackageType": "Package",

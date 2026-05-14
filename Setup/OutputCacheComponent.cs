@@ -23,7 +23,12 @@ namespace UmbracoOutputCache.Setup
 
 		public Task InitializeAsync(bool isRestarting, CancellationToken cancellationToken)
 		{
-			var outputCacheSettings = "OutputCacheSettings";
+			var IsDefaultOutputcachingEnable = _config.GetValue<bool>("Umbraco:CMS:Website:OutputCache:Enabled");
+			if (!IsDefaultOutputcachingEnable)
+			{ 
+				_logger.LogCritical("Output caching is not enabled in appsettings.json, so the {0} will not be registered. Please set Umbraco:CMS:Website:OutputCache:Enabled to true to enable output caching.", nameof(OutputCachedRenderController));
+            }
+            var outputCacheSettings = "OutputCacheSettings";
 			var cacheLifeSpanInSeconds = _config.GetValue<int>($"{outputCacheSettings}:CacheLifeSpanInSeconds");
 			if (cacheLifeSpanInSeconds == 0)
 			{

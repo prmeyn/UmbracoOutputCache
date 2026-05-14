@@ -17,7 +17,8 @@ namespace UmbracoOutputCache
 		[OutputCache(PolicyName = OutputCacheComponent.CachePolicyName)]
 		public override IActionResult Index()
 		{
-			return base.Index();
+			return Redirect("https://docs.umbraco.com/umbraco-cms/develop-with-umbraco/caching/website-output-caching");
+			// return base.Index();
 		}
 	}
 }
