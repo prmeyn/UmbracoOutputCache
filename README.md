@@ -1,3 +1,10 @@
+This package is now obsolete — Umbraco supports output caching for server-side rendering (SSR) out of the box.
+
+Please read the official Umbraco documentation on website output caching:
+
+https://docs.umbraco.com/umbraco-cms/develop-with-umbraco/caching/website-output-caching
+
+
 <del>
 # What does this package do?
 [Output caching](https://learn.microsoft.com/en-us/aspnet/core/performance/caching/overview?view=aspnetcore-7.0#output-caching) has been introduced in ASP.NET Core 7.0, which means you need to be on at least [version 11 of Umbraco.](https://our.umbraco.com/download/releases/1110)
@@ -30,8 +37,4 @@ For more details on how to configure your own default RenderController check [th
 This is a free package, but if you want to sponsor my open source work, here is [my GitHub profile](https://github.com/sponsors/prmeyn)
 </del>
 
-This package is now obsolete — Umbraco supports output caching for server-side rendering (SSR) out of the box.
 
-Please read the official Umbraco documentation on website output caching:
-
-https://docs.umbraco.com/umbraco-cms/develop-with-umbraco/caching/website-output-caching
